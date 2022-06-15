@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        #찍은 사진이 보이는 이미지뷰
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="83dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/black" />
+
+        #찍은 사진의 결과를 나타내는 텍스트뷰
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="200dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="#C30000"
+            android:textSize="33sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    #카메라의 찍을 사진을 보여주는 화면
+    <FrameLayout
+        android:layout_width="378dp"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+        <com.example.firebasetest.CameraSurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    #촬영버튼
+    <Button
+        android:id="@+id/button"
+        android:layout_width="371dp"
+        android:layout_height="195dp"
+        android:layout_margin="5dp"
+        android:backgroundTint="#FFE500"
+        android:text="촬   영"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
